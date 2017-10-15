@@ -32,6 +32,7 @@ En el caso que se ubiese tenido la BD estructurada adecuadamente, como propuesta
 Si una persona es clasificada erronea por una variable significativa, esto indicaría su proporcion a migrar.
 
 ### Problema 4.
+
 *Idea de solución*:
 - Se extraen todos los individuos pertenecientes a la RM filtrando a partir del modelo de fuga obtenido en el problema 3 (Primera Capa de datos)
 - Obtener la distribución de los centros de salud de todo tipo, ya sea privados o públicos.
@@ -43,7 +44,9 @@ Si una persona es clasificada erronea por una variable significativa, esto indic
 
 # Prueba de concepto realizada
 Se plantea una idea de concepto extrayendo de la data original todas las personas pertenecientes de la región metropolitana. Visualizando 
-así una primera capa de datos, la cual se quería utilizar como base para las operaciones antes descritas.
+así una primera capa de datos, la cual se quería utilizar como base para las operaciones antes descritas. 
+
+El tener una capa de centros medicos actuales permitiría efectuar procesamiento de capas georeferenciales 
 
 ## Caracteristicas utilizadas:
 BD cargada en una tabla mediante linea de comando de HIVE disponibilizandolos en hadoop. (Imagen adjunta).
@@ -75,8 +78,8 @@ A partir de modelo efectuado con RandomForest en Python, logrando una exactitud 
 Se fundamento propuesta de solución
 
 ### Problema 4.
-Se logra a partir de un proceso de Clustering
-![Mapa de Calor](https://github.com/JoaquinVillagra/Desafio_hackaton/tree/master/Imagenes/mapa_calor.png)
+Se logra a partir de un proceso de Clustering(![ImgClusters](https://github.com/JoaquinVillagra/Desafio_hackaton/tree/master/Imagenes/clustering.png)), un mapa de calor(![Mapa de Calor](https://github.com/JoaquinVillagra/Desafio_hackaton/tree/master/Imagenes/mapa_calor.png)) en donde los pointer de color azul corresponden a los centroides de los tres grupos generados a partir de los datos. Los pointer de color verde corresponden a centros de salud buscados y posicionados manualmente para efectuar correctamente la prueba de concepto propuesta. 
+
 
 
 

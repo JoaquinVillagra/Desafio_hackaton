@@ -57,6 +57,8 @@ print "Se inicia Random Forest"
 
 suma_respuesta = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 
+it = 0
+
 #se inicia la validacion cruzada
 for traincv, testcv in cv:
     
