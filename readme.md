@@ -52,14 +52,25 @@ Uso de los datos entregados de geolocalización en GoogleMaps para HeatMap con e
 
 ## Resultados:
 
+### Problema 1.
+*Exactitud del modelo para clasificar a un individuo perteneciente a Fonasa*
+![Prob(C/esDeFonasa)](https://github.com/JoaquinVillagra/Desafio_hackaton/tree/master/Imagenes/ExactitudDelModelo_desafio1.png)
+
+### Problema 2.
 *Probabilidad de dado que pertenece a Fonasa, sea del fondo A*
-![alt text](https://github.com/JoaquinVillagra/Desafio_hackaton/tree/master/Imagenes/TramoA.png)
+![Prob(A/esDeFonasa)](https://github.com/JoaquinVillagra/Desafio_hackaton/tree/master/Imagenes/TramoA.png)
 
 *Probabilidad de dado que pertenece a Fonasa, sea del fondo B*
-![alt text](https://github.com/JoaquinVillagra/Desafio_hackaton/tree/master/Imagenes/TramoB.png)
+![Prob(B/esDeFonasa)](https://github.com/JoaquinVillagra/Desafio_hackaton/tree/master/Imagenes/TramoB.png)
 
 *Probabilidad de dado que pertenece a Fonasa sea del fondo C*
-![alt text](https://github.com/JoaquinVillagra/Desafio_hackaton/tree/master/Imagenes/TramoC.png)
+![Prob(C/esDeFonasa)](https://github.com/JoaquinVillagra/Desafio_hackaton/tree/master/Imagenes/TramoC.png)
+
+*Probabilidad de dado que pertenece a Fonasa sea del fondo D*
+![Prob(C/esDeFonasa)](https://github.com/JoaquinVillagra/Desafio_hackaton/tree/master/Imagenes/TramoD.png)
+
+### Problema 3.
+Se fundamento propuesta de solución
 
 
 
