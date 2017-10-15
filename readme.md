@@ -31,8 +31,7 @@ En el caso que se ubiese tenido la BD estructurada adecuadamente, como propuesta
  individuos en las que se vieron modificadas variables como el estrato socio económico.
 Si una persona es clasificada erronea por una variable significativa, esto indicaría su proporcion a migrar.
 
-### Problema 4.
-
+### Problema 4.
 *Idea de solución*:
 - Se extraen todos los individuos pertenecientes a la RM filtrando a partir del modelo de fuga obtenido en el problema 3 (Primera Capa de datos)
 - Obtener la distribución de los centros de salud de todo tipo, ya sea privados o públicos.
