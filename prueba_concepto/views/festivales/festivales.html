@@ -1,0 +1,34 @@
+<h1 class="text-center">
+    <strong>Festivales</strong>
+    
+    <div class="pull-right">
+        <a href="#/festivales/create" class="btn btn-sm btn-success"><i class="fa fa-plus" aria-hidden="true"></i> Agregar</a>
+    </div>
+
+</h1>
+
+<hr>
+
+<h2 class="text-center" ng-hide="vm.dataLoaded">
+    <i class="fa fa-spinner fa-spin fa-2x fa-fw"></i>
+    <span class="sr-only">Loading...</span>
+</h2>
+
+<table class="table table-hover" ng-show="vm.dataLoaded">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th><i class="fa fa-calendar-check-o" aria-hidden="true"></i></th>
+            <th><i class="fa fa-map-marker" aria-hidden="true"></i></th>
+            <th>Ver</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="festival in vm.festivales">
+            <td>{{festival.festivalName}}</td>
+            <td>{{festival.startDate | date: 'd'}} de {{festival.startDate | date: 'MMMM'}} de {{festival.startDate | date: 'y'}}</td>
+            <td>Parque O'Higgins</td>
+            <td><a href="#/festivales/{{festival.festivalId}}" class="btn btn-xs btn-info"><i class="fa fa-eye" aria-hidden="true"></i></a></td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,20 @@
+<h1 class="text-center"><strong>{{vm.artista.artistName}}</strong></h1>
+
+<table class="table table-hover">
+    <tr>
+        <th>Nacionalidad:</th><td colspan="2">{{vm.artista.nationality.country}}</td>
+    </tr>
+    <tr>
+        <th colspan="3"><center><h4>Festivales confirmados:</h4></center></th>
+    </tr>
+    <tr>
+        <th>Nombre:</th>
+        <th>FechaInicio:</th>
+        <th></th>
+    </tr>
+    <tr ng-repeat="festival in vm.festivales">
+        <td>{{festival.festivalName}}</td>
+        <td>{{festival.endDate}}</td>
+        <th><a href="#/festivales/{{festival.festivalId}}" class="btn btn-sm btn-info"><i class="glyphicon glyphicon-eye-open"></i></a></th>
+    </tr>
+</table>

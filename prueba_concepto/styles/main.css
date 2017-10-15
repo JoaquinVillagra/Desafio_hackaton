@@ -1,0 +1,53 @@
+/*
+.angular-google-map-container {
+    height: 500px;
+}
+*/
+.side-nav {
+  position: fixed;
+  height: 100%;
+  padding-top: 20px;
+  background: #2a2a2a; }
+
+.nav .open > a {
+  transition: all .1s ease .1s;
+  background: #2a2a2a; }
+
+.nav .open > a:focus,
+.nav .open > a:hover {
+  color: white;
+  background: #2a2a2a; }
+
+.nav > li > a {
+  transition: all .1s ease .1s;
+  color: white; }
+
+.nav > li > a:active,
+.nav > li > a:hover,
+.nav > li > a:focus {
+  color: green;
+  background-color: #2a2a2a; }
+
+.upper-nav {
+  background: #eee; }
+
+.table-hover > tbody > tr {
+  color: #666; }
+
+.table-hover > tbody > tr:hover,
+.table-hover > tbody > tr:focus {
+  color: black;
+  background-color: #eee; }
+
+#mapa-de-calor {
+  height: 500px; }
+
+.grad-leyenda {
+  color: white;
+  color: -webkit-linear-gradient(left, white, black);
+  color: -moz-linear-gradient(right, white, black);
+  color: linear-gradient(to right, white, black);
+  background: #204644;
+  background: -webkit-linear-gradient(left, #204644, #8ECCC9);
+  background: -moz-linear-gradient(right, #204644, #8ECCC9);
+  background: linear-gradient(to right, #204644, #8ECCC9); }

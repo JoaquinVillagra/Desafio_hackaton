@@ -1,0 +1,27 @@
+<h1 class="text-center"><strong>{{vm.festival.festivalName}}</strong></h1>
+
+<hr>
+
+<th>Fecha Inicio:</th><td>{{vm.festival.startDate | date: 'd'}} de {{vm.festival.startDate | date: 'MMMM'}} de {{vm.festival.startDate | date: 'y'}}</td><td></td>
+<th>Fecha Termino:</th><td>{{vm.festival.endDate | date: 'd'}} de {{vm.festival.startDate | date: 'MMMM'}} de {{vm.festival.startDate | date: 'y'}}</td><td></td>
+
+<h2>Artistas Confirmados</h2>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th><i class="fa fa-flag" aria-hidden="true"></i></th>
+            <th><i class="fa fa-play" aria-hidden="true"></i></th>
+            <th>Ver</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="artista in vm.artistas">
+            <td>{{artista.artistName}}</td>
+            <td>{{artista.nationality.country}}</td>
+            <td>Electrónica</td>
+            <td><a href="#/artistas/{{artista.artistId}}" class="btn btn-xs btn-info"><i class="fa fa-eye" aria-hidden="true"></i></a></td>
+        </tr>
+    </tbody>
+</table>

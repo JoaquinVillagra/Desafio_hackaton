@@ -1,0 +1,32 @@
+{
+  "name": "simple-angular-template",
+  "version": "1.0.0",
+  "description": "FrontEnd FestiVer",
+  "start": 8000,
+  "main": "index.js",
+  "scripts": {
+    "build-css": "node-sass --include-path scss ./styles/main.scss   ./styles/main.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\"",
+    "dev": "concurrently --kill-others 'npm run watch-css' 'autoreload-server ./ 8800'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CamiloSalvo/prueba-html-angular.git"
+  },
+  "author": "dfao",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CamiloSalvo/prueba-html-angular/issues"
+  },
+  "homepage": "https://github.com/CamiloSalvo/prueba-html-angular#readme",
+  "devDependencies": {
+    "concurrently": "^3.0.0",
+    "node-sass": "^3.10.0",
+    "nodemon": "^1.10.2",
+    "simple-autoreload-server": "^0.1.7"
+  },
+  "dependencies": {
+    "angular-ui-bootstrap": "^2.2.0",
+    "ui-select": "^0.19.6"
+  }
+}

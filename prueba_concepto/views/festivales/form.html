@@ -1,0 +1,21 @@
+<form>
+    <div class="row">
+        <label>Nombre:</label>
+        <input type="text" ng-model="vm.data.festivalName">
+    </div>
+    <div class="row">
+        <label>Palabras clave:</label>
+        <input type="text" ng-model="vm.data.filters">
+    </div>
+    <div class="row">
+        <label>Fecha Inicio:</label>
+        <input type="text" ng-model="vm.data.startDate">
+    </div>
+    <div class="row">
+        <label>Fecha Termino:</label>
+        <input type="text" ng-model="vm.data.endDate">
+    </div>
+    <div class="row col-sm-3">
+        <button class="btn btn-md"><i class="fa fa-plus"></i> {{vm.action}}</button>
+    </div>
+</form>

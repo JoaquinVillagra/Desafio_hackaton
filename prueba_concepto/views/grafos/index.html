@@ -1,0 +1,73 @@
+<h1 class="text-center"><strong>Usuarios Influyentes</strong></h1>
+<hr>
+
+<h2 class="text-center" ng-hide="vm.dataLoaded">
+    <i class="fa fa-spinner fa-spin fa-2x fa-fw"></i>
+    <span class="sr-only">Loading...</span>
+</h2>
+
+<div class="row">
+	<div class="col-md col-md-6">
+		<button class="btn btn-block btn-md btn-info" ng-click="vm.showLeader = true; vm.showSpreader = false">Mostrar Lideres de opinión</button>
+	</div>
+	<div class="col-md col-md-6">
+		<button class="btn btn-block btn-md btn-info" ng-click="vm.showLeader = false; vm.showSpreader = true">Mostrar Diseminadores de opinión</button>
+	</div>
+</div>
+<br><br>
+<div class="row" ng-show="vm.dataLoaded">
+	<div ng-show="vm.showLeader">
+		<div class="panel panel-info">
+		  <div class="panel-heading"><center><h3><strong>Usuarios Lideres</strong></h3></center></div>
+		  <div class="panel-body">
+		    <p>
+		    <h5>
+		    Los lideres de opinion son Tuiteros inovadores, expertos en el topico o prestigiosos. Ellos se destacan por el efecto que causan sus tuits en la red, como los demas tuiteros reaccionan frente a él. Esto se calcula mediante el Leader Score (LS), definido como:
+		    </h5>
+		    </p>
+		  </div>
+		  <table class="table">
+		    <thead>
+		    	<th><i class="fa fa-hashtag"></i></th>
+		    	<th><i class="fa fa-user-circle-o"></i> Usuario</th>
+		    	<th><i class="fa fa-star"></i> Puntaje</th>
+		    </thead>
+		 	<tbody>
+		 		<tr ng-repeat="leader in vm.leaders"> 
+		 			<td>{{$index + 1}}</td>
+		 			<td><a href="http://www.twitter.com/{{leader.name}}" target="_blank">{{leader.name}}</a></td>
+		 			<td>{{leader.score}}</td>
+		 		</tr>
+		 		
+		 	</tbody>
+		  </table>
+		</div>
+
+	</div>
+	<div ng-show="vm.showSpreader">
+		<div class="panel panel-info">
+		  <div class="panel-heading"><center><h3><strong>Usuarios Diseminadores</strong></h3></center></div>
+		  <div class="panel-body">
+		    <p>
+		    <h5>Los diseminadores de opinion son Tuiteros que se encargan de extender, dispersar por la red los topicos propuestos por los lideres de opinion, ellos son identificados mediante el Spreader Score (SS), definido como:
+		    </h5>
+			</p>
+		  </div>
+		  <table class="table">
+		    <thead>
+		    	<th><i class="fa fa-hashtag"></i></th>
+		    	<th><i class="fa fa-user-circle-o"></i> Usuario</th>
+		    	<th><i class="fa fa-star"></i> Puntaje</th>
+		    </thead>
+		 	<tbody>
+		 		<tr ng-repeat="spreader in vm.spreaders"> 
+		 			<td>{{$index + 1}}</td>
+		 			<td><a href="http://www.twitter.com/{{spreader.name}}" target="_blank">{{spreader.name}}</a></td>
+		 			<td>{{spreader.score}}</td>
+		 		</tr>
+		 		
+		 	</tbody>
+		  </table>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,89 @@
+<h1 class="text-center"><strong>Infografias</strong></h1>
+<hr>
+
+<h2 class="text-center" ng-hide="vm.dataLoaded">
+    <i class="fa fa-spinner fa-spin fa-2x fa-fw"></i>
+    <span class="sr-only">Loading...</span>
+</h2>
+
+<div ng-show = "vm.dataLoaded">
+
+<br>
+
+<div class="row">
+	<div class="col-md-3">
+		<div class="form-group">
+			<select class="form-control" placeholder="Hey" ng-model="vm.selectTipo">
+				<option>Cantidad</option>
+				<option>Score</option>
+			</select>
+		</div>
+	</div>
+
+	<div class="col-md-3">
+		<div class="form-group">
+			<div class="input-group date" id="date-picker-start">
+				<input type="text" class="form-control" placeholder="Fecha de inicio" ng-model="vm.fechaInicio">
+				<span class="input-group-addon">
+					<span class="fa fa-hashtag"></span>
+				</span>				
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-3">
+		<div class="form-group">
+			<div class="input-group date" id="date-picker-finish">
+				<input type="text" class="form-control" placeholder="Fecha de termino" ng-model="vm.fechaTermino">
+				<span class="input-group-addon">
+					<span class="fa fa-hashtag"></span>
+				</span>				
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-3">
+		<button class="btn btn-success btn-block" ng-click="vm.test()">Generar</button>
+	</div>
+
+	<script type="text/javascript">
+		$(function(){
+			$('#date-picker-start').datepicker({
+				format: "yyyy-mm-dd"
+			});
+			$('#date-picker-finish').datepicker({
+				format: "yyyy-mm-dd"
+			});
+		});
+	</script>
+</div>
+
+<div class="row" ng-show="vm.selectTipo=='Cantidad'">
+    <nvd3 options="vm.options" data="vm.datos"></nvd3>
+</div>
+
+
+<div class="row" ng-show="vm.selectTipo=='Score'">
+    <nvd3 options="vm.options2" data="vm.datos"></nvd3>
+</div>
+
+<div class="row">
+	<div class="col-md-6 col-md-offset-3">
+		<p>En el siguiente gráfico se utilizan diferentes métricas para obtener los datos, los cuales son:</p>
+		<ul>
+			<li>
+				<p>Cantidad:</p>
+				<p>Simplemente se calculan los tweets por día correspondientes a un festival.</p>
+			</li>
+			<li>
+				<p>Score:</p>
+				<p>Para calcular el puntaje se utiliza la siguiente formula:</p>
+				<div class="text-center">
+					<h4><sup>positivos</sup>&frasl;<sub>2</sub> + <sup>neutros</sup>&frasl;<sub>4</sub> + <sup>negativos</sup>&frasl;<sub>8</sub></h4>
+				</div>
+			</li>
+		</ul>	
+	</div>
+</div>
+
+</div>

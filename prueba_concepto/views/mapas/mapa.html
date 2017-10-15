@@ -1,0 +1,8 @@
+<style type="text/css">
+    .angular-google-map-container { height: 400px; }
+</style>
+<ui-gmap-google-map center='vm.map.center' zoom='vm.map.zoom'>
+    <ui-gmap-layer namespace="visualization" type="HeatmapLayer" show="vm.map.showHeat" onCreated=" vm.map.heatLayerCallback"></ui-gmap-layer>
+
+    <ui-gmap-markers models="vm.markers" coords="'position'"" labelContent="'title'"></ui-gmap-marker>
+</ui-gmap-google-map>
