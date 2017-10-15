@@ -15,7 +15,7 @@ datos = pandas.concat([data, data1, data2, data3, data4])
 #print datos
 
 #seleccionamos las caracteristicas
-selectOpt = ["hackathon.status_salud_publica","hackathon.edad","hackathon.estrato","hackathon.comuna","hackathon.ind_morosidad1","hackathon.ind_morosidad2"]
+selectOpt = ["hackathon.status_salud_publica","hackathon.edad","hackathon.estrato","hackathon.ind_morosidad1","hackathon.ind_morosidad2","hackathon.cant_personas_fam","hackathon.cant_hijos_fam","hackathon.tot_mont","hackathon.cant_autos"]
 
 datos = datos.loc[:,selectOpt]
 
