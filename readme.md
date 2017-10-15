@@ -73,6 +73,8 @@ A partir de modelo efectuado con RandomForest en Python, logrando una exactitud 
 *Probabilidad de dado que pertenece a Fonasa sea del fondo D*
 ![Prob(D/esDeFonasa)](https://github.com/JoaquinVillagra/Desafio_hackaton/tree/master/Imagenes/TramoD.png)
 
+A través de la implementación disponible en el archivo 2_f.py, se logra una exactitud de aproximadamente un 48% usando RandomForest para la clasificación de los tramos A,B,C,D del sistema FONASA. 
+
 ### Problema 3.
 Se fundamento propuesta de solución
 
