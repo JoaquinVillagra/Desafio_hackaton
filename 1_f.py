@@ -10,6 +10,11 @@ data3 = pandas.read_csv('./data_prueba/C.csv')
 data4 = pandas.read_csv('./data_prueba/D.csv')
 
 datos = pandas.concat([data, data1, data2, data3, data4])
+
+atos = datos.sample(frac = 1)
+datos = datos.sample(frac = 1)
+datos = datos.sample(frac = 1)
+
 #print datos
 
 #seleccionamos las caracteristicas
