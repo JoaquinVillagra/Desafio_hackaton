@@ -12,18 +12,22 @@ de árboles de decisión con bootstrapping, el cual genera n arboles que para ef
 n arboles y aquel más votado (moda) es el seleccionado.
 Debido a la cantidad de datos y en base a la literatura, se establece como 70% entrenamiento y 30% test.
 
+Se debe entender que un modelo de clasificación no es fácil de perfeccionar.
+Se efectua una implementación de regresión lógistica utilizada para comprobar reducción de caracteristicas.
+
 Esta implementación está disponible en el archivo: randomForest.py
 
 ### Problema 2.
 Este problema es solucionado con la misma técnica que el anterior, la diferencia radica a la hora de clasificar en donde la probabilidad 
-encontrada logicamente debería corresponder a un de profundidad del nivel anterior (probabilidad condicional).
+encontrada logicamente debería corresponder a un nivel mayor de profundidad (probabilidad condicional).
 
 ### Problema 3.
 El problema 3 optamos por pasar de él, producto de que los datos presentes en la BD entregada poseía el déficit de la pariedad de
 datos entre dos años pertenecientes al mismo individuo. Esto quiere decir, el estado de una persona el año 2016 y la misma persona año 2017,
  situación dificil de identificar producto de la estructura de BD.
 En el caso que se ubiese tenido la BD estructurada adecuadamente, como propuesta de solución se ocuparía la prueba de McNemar sobre aquellos
- individuos en las que se vieron modificadas variables como el estrato socio económico  
+ individuos en las que se vieron modificadas variables como el estrato socio económico.
+Si una persona es clasificada erronea por una variable significativa, esto indicaría su proporcion a migrar.
 
 ### Problema 4.
 # Idea de solución:
