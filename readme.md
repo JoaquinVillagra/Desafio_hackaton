@@ -1,0 +1,47 @@
+# Hackathon: Desafío Big Data.
+
+## Integrantes Equipo Vendetta.
+- Ignacio Ibáñez Aliaga
+- Matías Vargas Mora
+- Joaquín Villagra Pacheco
+
+### Herramienta a utilizar R
+### Problema 1.
+El problema se busca solucionar a partir de un bosque de clasificación aleatorio: randomForest, cuyo método consiste en el ensamble
+de árboles de decisión con bootstrapping, el cual genera n arboles que para efectos de clasificación un dato a clasificar es evaluado por los 
+n arboles y aquel más votado (moda) es el seleccionado.
+Debido a la cantidad de datos y en base a la literatura, se establece como 70% entrenamiento y 30% test.
+
+Esta implementación está disponible en el archivo: randomForest.py
+
+### Problema 2.
+Este problema es solucionado con la misma técnica que el anterior, la diferencia radica a la hora de clasificar en donde la probabilidad 
+encontrada logicamente debería corresponder a un de profundidad del nivel anterior (probabilidad condicional).
+
+### Problema 3.
+El problema 3 optamos por pasar de él, producto de que los datos presentes en la BD entregada poseía el déficit de la pariedad de
+datos entre dos años pertenecientes al mismo individuo. Esto quiere decir, el estado de una persona el año 2016 y la misma persona año 2017,
+ situación dificil de identificar producto de la estructura de BD.
+En el caso que se ubiese tenido la BD estructurada adecuadamente, como propuesta de solución se ocuparía la prueba de McNemar sobre aquellos
+ individuos en las que se vieron modificadas variables como el estrato socio económico  
+
+### Problema 4.
+# Idea de solución:
+- Se extraen todos los individuos pertenecientes a la RM filtrando a partir del modelo de fuga obtenido en el problema 3 (Primera Capa de datos)
+- Obtener la distribución de los centros de salud de todo tipo, ya sea privados o públicos.
+- Aplicar función de intersección entre capas. 
+- Función que recomiende considerando:
+	- La próximidad de la persona al UAP.
+	- La lejanía de la persona a algún Servicio de Salud (Público o Privado).
+	- La probabilidad de que la persona se cambie.
+
+# Prueba de concepto realizada
+Se plantea una idea de concepto extrayendo de la data original todas las personas pertenecientes de la región metropolitana. Visualizando 
+así una primera capa de datos, la cual se quería utilizar como base para las operaciones antes descritas.
+
+## Caracteristicas utilizadas:
+BD cargada en una tabla mediante linea de comando de HIVE disponibilizandolos en hadoop. (Imagen adjunta).
+Uso de Spark para ejecutar código en python correspondiente a randomForest (python con numpy y pyspark).
+Uso de los datos entregados de geolocalización en GoogleMaps para HeatMap con el uso de AngularJS 1.6.
+
+
