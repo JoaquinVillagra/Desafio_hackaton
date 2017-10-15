@@ -41,10 +41,10 @@ datos["hackathon.estrato"] = datos["hackathon.estrato"].astype('int')
 datos["hackathon.ind_morosidad1"] = datos["hackathon.ind_morosidad1"].astype('int')
 datos["hackathon.ind_morosidad2"] = datos["hackathon.ind_morosidad2"].astype('int')
 
-model = RandomForestClassifier(n_estimators=500)
+model = RandomForestClassifier(n_estimators=700)
 
 #Simple K-Fold cross validation. 10 folds.
-cv = cross_validation.KFold(len(datos), n_folds=3)
+cv = cross_validation.KFold(len(datos), n_folds=8)
 
 vp = 0
 vn = 0
