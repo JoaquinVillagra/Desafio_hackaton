@@ -15,11 +15,13 @@ Debido a la cantidad de datos y en base a la literatura, se establece como 70% e
 Se debe entender que un modelo de clasificación no es fácil de perfeccionar.
 Se efectua una implementación de regresión lógistica utilizada para comprobar reducción de caracteristicas.
 
-Esta implementación está disponible en el archivo: randomForest.py
+Esta implementación está disponible en el archivo: 1_f.py
 
 ### Problema 2.
 Este problema es solucionado con la misma técnica que el anterior, la diferencia radica a la hora de clasificar en donde la probabilidad 
 encontrada logicamente debería corresponder a un nivel mayor de profundidad (probabilidad condicional).
+
+Implementación disponible en: 2_f.py
 
 ### Problema 3.
 El problema 3 optamos por pasar de él, producto de que los datos presentes en la BD entregada poseía el déficit de la pariedad de

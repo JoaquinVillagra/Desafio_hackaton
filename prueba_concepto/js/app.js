@@ -18,17 +18,12 @@ var app = angular.module("angularSpa", [
 	})
 	.config(function($routeProvider) {
 		$routeProvider
-		.when("/home", {
-			templateUrl: "views/main.html",
-			controllerAs: "vm",
-			controller: "MainCtrl"
-		})
 		.when("/mapa", {
 			templateUrl: "views/mapas/mapa.html",
 			controllerAs: "vm",
 			controller: "MapaCtrl"
 		})
 		.otherwise({
-			redirectTo: "/home"
+			redirectTo: "/mapa"
 		});
 	});
