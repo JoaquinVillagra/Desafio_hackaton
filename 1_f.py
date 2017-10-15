@@ -3,11 +3,11 @@ import numpy as np
 import pandas
 from sklearn import cross_validation
 
-data = pandas.read_csv('./data_prueba/NO_C_2017.csv')
-data1 = pandas.read_csv('./data_prueba/A.csv')
-data2 = pandas.read_csv('./data_prueba/B.csv')
-data3 = pandas.read_csv('./data_prueba/C.csv')
-data4 = pandas.read_csv('./data_prueba/D.csv')
+data = pandas.read_csv('./NO_C_2017.csv')
+data1 = pandas.read_csv('./A.csv')
+data2 = pandas.read_csv('./B.csv')
+data3 = pandas.read_csv('./C.csv')
+data4 = pandas.read_csv('./D.csv')
 
 datos = pandas.concat([data, data1, data2, data3, data4])
 
