@@ -75,6 +75,7 @@ A partir de modelo efectuado con RandomForest en Python, logrando una exactitud 
 Se fundamento propuesta de solución
 
 ### Problema 4.
+Se logra a partir de un proceso de Clustering
 ![Mapa de Calor](https://github.com/JoaquinVillagra/Desafio_hackaton/tree/master/Imagenes/mapa_calor.png)
 
 
