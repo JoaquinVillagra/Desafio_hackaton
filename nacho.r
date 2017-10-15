@@ -61,7 +61,10 @@ print(paste("No pertenece: ",1000000-pertenece))
 # [1] "header:  hackathon.periodo  suma:  100000"
 # [1] "header:  hackathon.tramo_salud_publico  suma:  100000"
 
-eliminar = c("hackathon.profesion","hackathon.actividad","hackathon.est_civil","hackathon.tipo_nacionalidad","hackathon.ind_interd","hackathon.longitud","hackathon.latitud","hackathon.periodo","hackathon.tramo_salud_publico")
+eliminar = c("hackathon.profesion","hackathon.actividad","hackathon.est_civil","hackathon.tipo_nacionalidad","hackathon.longitud","hackathon.latitud","hackathon.periodo","hackathon.tramo_salud_publico")
+
+modelo.logit <- glm(hackathon.status_salud_publica ~ hackathon.edad+hackathon.estrato+hackathon.ind_interd+hackathon.comuna+hackathon.ind_morosidad1+ hackathon.ind_morosidad2+hackathon.cant_hijos_fam,
+                    data = data, family = "binomial")
 
 for( i in 1:length(eliminar)){
   data[eliminar[i]] <- NULL

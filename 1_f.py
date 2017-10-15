@@ -10,8 +10,6 @@ data3 = pandas.read_csv('C.csv')
 data4 = pandas.read_csv('D.csv')
 
 datos = pandas.concat([data, data1, data2, data3, data4])
-
-datos = pandas.concat([data, data1, data2, data3, data4])
 #print datos
 
 #seleccionamos las caracteristicas
