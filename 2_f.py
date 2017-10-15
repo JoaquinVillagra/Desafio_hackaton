@@ -65,4 +65,4 @@ clf = model.fit(df_train.loc[:, 'hackathon.edad':], df_train["hackathon.tramo_sa
 #modelo.fit(df_train[headers], df_train["hackathon.status_salud_publica"])
 probas = clf.predict(df_test.loc[:, 'hackathon.edad':])
 
-pd.crosstab(df_test["hackathon.tramo_salud_publico"], probas, rownames=['Actual'], colnames=['Predicted'])
+print pandas.crosstab(df_test["hackathon.tramo_salud_publico"], probas, rownames=['Actual'], colnames=['Predicted'])
