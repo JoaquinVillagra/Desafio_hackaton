@@ -17,11 +17,17 @@ app.controller("MapaCtrl", function($scope, uiGmapGoogleMapApi, MapService) {
     };
 
     vm.markers = [
-        {id: 1, position: {latitude:-33.4326367,longitude: -70.6305423}, title:'Clinica'},
-        {id: 2, position: {latitude: -33.426693,longitude:  -70.648168}, title:'Clinica'},
-        {id: 3, position: {latitude: -33.484312,longitude:  -70.645799}, title:'Clinica'},
-        {id: 4, position: {latitude: -33.484312,longitude:  -70.645799}, title:'Clinica'},
-        {id: 5, position: {latitude:-33.456873,longitude:  -70.702931}, title:'Clinica'}
+        {id: 1, position: {latitude:-33.4326367,longitude: -70.6305423}, title:'Clinica', image:'http://maps.google.com/mapfiles/ms/icons/green-dot.png'},
+        {id: 2, position: {latitude: -33.426693,longitude:  -70.648168}, title:'Clinica', image:'http://maps.google.com/mapfiles/ms/icons/green-dot.png'},
+        {id: 3, position: {latitude: -33.484312,longitude:  -70.645799}, title:'Clinica', image:'http://maps.google.com/mapfiles/ms/icons/green-dot.png'},
+        {id: 4, position: {latitude: -33.484312,longitude:  -70.645799}, title:'Clinica', image:'http://maps.google.com/mapfiles/ms/icons/green-dot.png'},
+        {id: 5, position: {latitude:-33.456873,longitude:  -70.702931}, title:'Clinica', image:'http://maps.google.com/mapfiles/ms/icons/green-dot.png'}
+    ];
+
+    vm.markers2 = [
+        {id: 8, position: {latitude: -33.436487,longitude: -70.740847}, image:'http://maps.google.com/mapfiles/ms/icons/blue-dot.png', title:'Punto'},
+        {id: 9, position: {latitude: -33.577271,longitude: -70.575307}, image:'http://maps.google.com/mapfiles/ms/icons/blue-dot.png', title:'Punto'},
+        {id: 10, position: {latitude: -33.441365,longitude: -70.676756}, image:'http://maps.google.com/mapfiles/ms/icons/blue-dot.png', title:'Punto'}
     ];
     //console.log(vm.map);
     uiGmapGoogleMapApi.then(function(maps) {
