@@ -43,6 +43,33 @@ for(i in 1:(length(header))){
 # [1] "header:  hackathon.periodo  suma:  100000"
 
 #cantidad de gente que pertenece y cantidad que no pertenece
-pertenece = sum(data[,"status_salud_publica"] == "S")
+pertenece = sum(data[,"hackathon.status_salud_publica"] == "S")
 print(paste("pertenece: ",pertenece))
 print(paste("No pertenece: ",1000000-pertenece))
+# > print(paste("pertenece: ",pertenece))
+# [1] "pertenece:  22392"
+# > print(paste("No pertenece: ",1000000-pertenece))
+# [1] "No pertenece:  977608"
+
+# [1] "header:  hackathon.profesion  suma:  3796"
+# [1] "header:  hackathon.actividad  suma:  67210"
+# [1] "header:  hackathon.est_civil  suma:  96595"
+# [1] "header:  hackathon.tipo_nacionalidad  suma:  97796"
+# [1] "header:  hackathon.ind_interd  suma:  35529"
+# [1] "header:  hackathon.longitud  suma:  85586"
+# [1] "header:  hackathon.latitud  suma:  85586"
+# [1] "header:  hackathon.periodo  suma:  100000"
+# [1] "header:  hackathon.tramo_salud_publico  suma:  100000"
+
+eliminar = c("hackathon.profesion","hackathon.actividad","hackathon.est_civil","hackathon.tipo_nacionalidad","hackathon.ind_interd","hackathon.longitud","hackathon.latitud","hackathon.periodo","hackathon.tramo_salud_publico")
+
+for( i in 1:length(eliminar)){
+  data[eliminar[i]] <- NULL
+}
+data["X"] = NULL
+#se aplica random forest
+require(randomForest)
+
+set.seed(71) #Semilla usada para la generación del proceso aleatorio.
+modelo = randomForest(hackathon.status_salud_publica ~ ., data=data[1:70000,], ntree = 500, importance=TRUE,
+                          proximity=TRUE)
