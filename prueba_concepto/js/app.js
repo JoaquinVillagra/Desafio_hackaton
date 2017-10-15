@@ -13,7 +13,7 @@ var app = angular.module("angularSpa", [
 	})
 	.service('MapService', function($http, $q){
 		this.getDatos = function(){
-			return $http.get('src/RM_Position.csv');
+			return $http.get('src/DatosUsados_localizaciones.csv');
 		};
 	})
 	.config(function($routeProvider) {

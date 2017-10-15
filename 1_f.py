@@ -3,6 +3,7 @@ import numpy as np
 import pandas
 from sklearn import cross_validation
 
+<<<<<<< HEAD
 
 #se lee la base de datos
 data = pandas.read_csv('./data_prueba/NO_C_2017.csv')
@@ -10,6 +11,13 @@ data1 = pandas.read_csv('./data_prueba/A.csv')
 data2 = pandas.read_csv('./data_prueba/B.csv')
 data3 = pandas.read_csv('./data_prueba/C.csv')
 data4 = pandas.read_csv('./data_prueba/D.csv')
+=======
+data = pandas.read_csv('./NO_C_2017.csv')
+data1 = pandas.read_csv('./A.csv')
+data2 = pandas.read_csv('./B.csv')
+data3 = pandas.read_csv('./C.csv')
+data4 = pandas.read_csv('./D.csv')
+>>>>>>> b1f2accfecaae046f2d4c1241eeed8fd7961052c
 
 #son unidad
 datos = pandas.concat([data, data1, data2, data3, data4])
@@ -45,6 +53,7 @@ datos["hackathon.estrato"] = datos["hackathon.estrato"].astype('int')
 datos["hackathon.ind_morosidad1"] = datos["hackathon.ind_morosidad1"].astype('int')
 datos["hackathon.ind_morosidad2"] = datos["hackathon.ind_morosidad2"].astype('int')
 
+<<<<<<< HEAD
 #se crea un modelo de random forest
 model = RandomForestClassifier(n_estimators=700)
 #se realiza validacion cruzada
@@ -52,6 +61,12 @@ cv = cross_validation.KFold(len(datos), n_folds=8)
 
 
 print "Se inicia Random Forest"
+=======
+model = RandomForestClassifier(n_estimators=700)
+
+#Simple K-Fold cross validation. 10 folds.
+cv = cross_validation.KFold(len(datos), n_folds=8)
+>>>>>>> b1f2accfecaae046f2d4c1241eeed8fd7961052c
 
 vp = 0
 vn = 0
