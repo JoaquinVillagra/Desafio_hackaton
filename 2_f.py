@@ -1,3 +1,4 @@
+
 from sklearn.ensemble import RandomForestClassifier #para implementar el random forest
 import numpy as np
 import pandas
@@ -49,7 +50,7 @@ print "Inicio del Random Forest"
 
 model = RandomForestClassifier(n_estimators=500)
 #se realiza validacion cruzada
-cv = cross_validation.KFold(len(datos), n_folds=8)
+cv = cross_validation.KFold(len(datos), n_folds=5)
 
 
 print "Se inicia Random Forest"
@@ -63,7 +64,7 @@ for traincv, testcv in cv:
     
     probas = clf.predict(datos.loc[testcv].loc[:, 'hackathon.edad':])
 
-    respuesta = pandas.crosstab(df_test["hackathon.tramo_salud_publico"], probas, rownames=['Actual'], colnames=['Predicted'])
+    respuesta = pandas.crosstab(datos.loc[testcv]["hackathon.tramo_salud_publico"], probas, rownames=['Actual'], colnames=['Predicted'])
     
     suma_respuesta[0]+=respuesta[0][0]
     suma_respuesta[1]+=respuesta[1][0]
