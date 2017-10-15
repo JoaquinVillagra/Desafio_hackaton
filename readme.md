@@ -54,7 +54,9 @@ Uso de los datos entregados de geolocalización en GoogleMaps para HeatMap con e
 
 ### Problema 1.
 *Exactitud del modelo para clasificar a un individuo perteneciente a Fonasa*
-![Prob(C/esDeFonasa)](https://github.com/JoaquinVillagra/Desafio_hackaton/tree/master/Imagenes/ExactitudDelModelo_desafio1.png)
+![Prob(Individuo=>Fonasa)](https://github.com/JoaquinVillagra/Desafio_hackaton/tree/master/Imagenes/ExactitudDelModelo_desafio1.png)
+
+A partir de modelo efectuado con RandomForest en Python, logrando una exactitud del 74% en la clasificación. (Código fuente Python: 1_f.py) 
 
 ### Problema 2.
 *Probabilidad de dado que pertenece a Fonasa, sea del fondo A*
@@ -67,10 +69,13 @@ Uso de los datos entregados de geolocalización en GoogleMaps para HeatMap con e
 ![Prob(C/esDeFonasa)](https://github.com/JoaquinVillagra/Desafio_hackaton/tree/master/Imagenes/TramoC.png)
 
 *Probabilidad de dado que pertenece a Fonasa sea del fondo D*
-![Prob(C/esDeFonasa)](https://github.com/JoaquinVillagra/Desafio_hackaton/tree/master/Imagenes/TramoD.png)
+![Prob(D/esDeFonasa)](https://github.com/JoaquinVillagra/Desafio_hackaton/tree/master/Imagenes/TramoD.png)
 
 ### Problema 3.
 Se fundamento propuesta de solución
+
+### Problema 4.
+![Mapa de Calor](https://github.com/JoaquinVillagra/Desafio_hackaton/tree/master/Imagenes/mapa_calor.png)
 
 
 
