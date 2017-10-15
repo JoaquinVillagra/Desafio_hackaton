@@ -32,7 +32,7 @@ En el caso que se ubiese tenido la BD estructurada adecuadamente, como propuesta
 Si una persona es clasificada erronea por una variable significativa, esto indicaría su proporcion a migrar.
 
 ### Problema 4.
-# Idea de solución:
+*Idea de solución*:
 - Se extraen todos los individuos pertenecientes a la RM filtrando a partir del modelo de fuga obtenido en el problema 3 (Primera Capa de datos)
 - Obtener la distribución de los centros de salud de todo tipo, ya sea privados o públicos.
 - Aplicar función de intersección entre capas. 
@@ -49,5 +49,19 @@ así una primera capa de datos, la cual se quería utilizar como base para las o
 BD cargada en una tabla mediante linea de comando de HIVE disponibilizandolos en hadoop. (Imagen adjunta).
 Uso de Spark para ejecutar código en python correspondiente a randomForest (python con numpy y pyspark).
 Uso de los datos entregados de geolocalización en GoogleMaps para HeatMap con el uso de AngularJS 1.6.
+
+## Resultados:
+
+*Probabilidad de dado que pertenece a Fonasa, sea del fondo A*
+![alt text](https://github.com/JoaquinVillagra/Desafio_hackaton/tree/master/Imagenes/TramoA.png)
+
+*Probabilidad de dado que pertenece a Fonasa, sea del fondo B*
+![alt text](https://github.com/JoaquinVillagra/Desafio_hackaton/tree/master/Imagenes/TramoB.png)
+
+*Probabilidad de dado que pertenece a Fonasa sea del fondo C*
+![alt text](https://github.com/JoaquinVillagra/Desafio_hackaton/tree/master/Imagenes/TramoC.png)
+
+
+
 
 
