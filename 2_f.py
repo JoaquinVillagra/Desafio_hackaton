@@ -47,7 +47,7 @@ datos["hackathon.ind_morosidad2"] = datos["hackathon.ind_morosidad2"].astype('in
 
 print "Inicio del Random Forest"
 
-model = RandomForestClassifier(n_estimators=700)
+model = RandomForestClassifier(n_estimators=500)
 #se realiza validacion cruzada
 cv = cross_validation.KFold(len(datos), n_folds=8)
 
