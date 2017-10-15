@@ -5,7 +5,7 @@
 - Matías Vargas Mora
 - Joaquín Villagra Pacheco
 
-### Herramienta a utilizar R
+### Planteamiento de los Problemas
 ### Problema 1.
 El problema se busca solucionar a partir de un bosque de clasificación aleatorio: randomForest, cuyo método consiste en el ensamble
 de árboles de decisión con bootstrapping, el cual genera n arboles que para efectos de clasificación un dato a clasificar es evaluado por los 
