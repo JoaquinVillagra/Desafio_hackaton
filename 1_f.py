@@ -3,11 +3,11 @@ import numpy as np
 import pandas
 from sklearn import cross_validation
 
-data = pandas.read_csv('NO_C_2017.csv')
-data1 = pandas.read_csv('A.csv')
-data2 = pandas.read_csv('B.csv')
-data3 = pandas.read_csv('C.csv')
-data4 = pandas.read_csv('D.csv')
+data = pandas.read_csv('./data_prueba/NO_C_2017.csv')
+data1 = pandas.read_csv('./data_prueba/A.csv')
+data2 = pandas.read_csv('./data_prueba/B.csv')
+data3 = pandas.read_csv('./data_prueba/C.csv')
+data4 = pandas.read_csv('./data_prueba/D.csv')
 
 datos = pandas.concat([data, data1, data2, data3, data4])
 
@@ -34,14 +34,14 @@ datos.loc[datos["hackathon.estrato"] == "E", "hackathon.estrato"]= 1
 datos["hackathon.status_salud_publica"] = datos["hackathon.status_salud_publica"].astype('int')
 datos["hackathon.edad"] = datos["hackathon.edad"].astype('int')
 datos["hackathon.estrato"] = datos["hackathon.estrato"].astype('int')
-datos["hackathon.comuna"] = datos["hackathon.comuna"].astype('int')
+#datos["hackathon.comuna"] = datos["hackathon.comuna"].astype('int')
 datos["hackathon.ind_morosidad1"] = datos["hackathon.ind_morosidad1"].astype('int')
 datos["hackathon.ind_morosidad2"] = datos["hackathon.ind_morosidad2"].astype('int')
 
 model = RandomForestClassifier(n_estimators=500)
 
 #Simple K-Fold cross validation. 10 folds.
-cv = cross_validation.KFold(len(datos), n_folds=10)
+cv = cross_validation.KFold(len(datos), n_folds=3)
 
 vp = 0
 vn = 0
